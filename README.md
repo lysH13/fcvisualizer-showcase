@@ -2,7 +2,7 @@
 Note : Ceci est un dépôt vitrine. Le code source complet est hébergé sur un dépôt privé.
 
 # FC VISUALIZER 📊⚽
-Un outil de visualisation vidéo avancé pour l'analyse statistique du football, construit avec **Remotion**. Créez des vidéos dynamiques et engageantes à partir de données de joueurs, avec animations, masques personnalisés et analyses prédictives.
+Un outil de visualisation vidéo avancé pour l'analyse statistique du football, construit avec **Remotion**. Création de vidéos dynamiques et engageantes à partir de données de joueurs, avec animations, masques personnalisés et analyses prédictives.
 
 ## 🎯 Vue d'ensemble
 
@@ -136,52 +136,6 @@ Ces composants présentent des visualisations du projet. Ils utilisent Remotion,
 - **Autoprefixer** (10.4.21) : CSS prefixes
 - **PostCSS** (8.5.6) : Traitement CSS
 
-## 🏗️ Architecture
-
-```
-fc_visualizer/
-├── src/
-│   ├── Main/                          # Composants principaux
-│   │   ├── prediction/                # Algorithmes prédictifs
-│   │   │   └── PredictionFunctions.tsx
-│   │   └── test/                      # Composants de test
-│   ├── Utilities/                     # Utilitaires visuels
-│   │   ├── PlayersGrid.tsx           # Grilles de joueurs
-│   │   ├── ImagePositioner.tsx       # Positionneur d'images
-│   │   ├── MaskAnimation.tsx         # Animations de masques
-│   │   ├── PersonMaskTemplates.tsx   # Templates de masques
-│   │   ├── PersonPaths.tsx           # Générateurs de chemins
-│   │   ├── CatchPhrase.tsx           # Phrases accrocheuses
-│   │   ├── EndScreen.tsx             # Écrans de fin
-│   │   ├── Header.tsx                # Headers de joueurs
-│   │   ├── StickersSvg.tsx           # Icônes SVG
-│   │   └── types.tsx                 # Types TypeScript
-│   ├── const/                        # Constantes
-│   │   ├── players.ts                # Données joueurs
-│   │   └── TinyFunctions.ts          # Fonctions utilitaires
-│   ├── data/                         # Données de configuration
-│   │   ├── imageConfigs.json         # Configs d'images
-│   │   └── imageConfigs.ts           # Types configs
-│   ├── Root.tsx                      # Point d'entrée Remotion
-│   ├── index.css                     # Styles globaux
-│   └── FontLoader.tsx                # Chargement polices
-├── public/                           # Assets statiques
-│   ├── players.json                  # Métadonnées joueurs
-│   ├── playersData/                  # Données CSV par équipe
-│   ├── playersImgClean/              # Images joueurs nettoyées
-│   ├── masks/                        # Masques de silhouette JSON
-│   ├── cryptedImg/                   # Images cryptées
-│   └── quiz/                         # Assets quiz
-├── brouillon/                        # Développement
-│   ├── ideesAnalyse.txt              # Idées d'analyse
-│   ├── remarques.txt                 # Notes techniques
-│   ├── saves.txt                     # Sauvegardes
-│   └── spider.tsx                    # Composant araignée
-├── server.js                         # Serveur de configuration
-├── remotion.config.ts               # Config Remotion
-├── package.json                      # Dépendances
-└── tsconfig.json                     # Config TypeScript
-```
 
 ## 🎮 Flux utilisateur
 
@@ -228,15 +182,23 @@ POST /api/list-players   // Lister joueurs par équipe
 
 ## 🎯 Types de données principaux
 
+
+### Data
+```typescript
+
+PlayerRow : {
+  [key: string]: any;  // Statistiques des matchs et joueurs scrappés
+}
+```
+
+
 ### Player
 ```typescript
 {
   name: string;
-  color: string;
+  data: PlayerRow[]      // Statistiques des matchs et joueurs scrappés
   csv: string;           // Chemin vers données CSV
   imgPlayer: string;     // Chemin vers image
-  clubSrc: string;       // Logo club
-  nationSrc: string;     // Drapeau nation
   mask?: string;         // Masque silhouette
 }
 ```
@@ -270,13 +232,12 @@ POST /api/list-players   // Lister joueurs par équipe
 - Cartes de joueurs avec headers
 
 ### ImagePositioner
-- Interface drag & drop
 - Zoom et position en temps réel
 - Sauvegarde automatique des configs
 
 ### MaskAnimation
 - Animations de silhouette
-- Effets électriques, vortex, flammes
+- Effets spéciaux
 - Chemins de mouvement procéduraux
 
 ### PredictionFunctions
@@ -370,20 +331,6 @@ npm run lint             # Vérifier le code
 - **Analyse de patterns** : Détection de tendances
 - **Prédictions multi-variables** : Plusieurs métriques
 
-## 🎯 Idées d'Analyse (brouillon/)
-
-### Analyses Implémentées
-- **Comparaisons équipe** : Real Madrid vs FC Barcelone
-- **Stats individuelles** : Meilleures/pires performances
-- **Évolution temporelle** : Courbes de progression
-- **Quiz interactif** : Questions sur les données
-
-### Idées Futures
-- **Détection de talents** : Joueurs sous-cotés
-- **Fantasy football** : Optimisation d'équipes
-- **Prédictions de mercato** : Transferts probables
-- **Analyse comparative** : Par position, âge, nationalité
-
 ## 📊 Formats de Données
 
 ### CSV Joueurs
@@ -476,10 +423,7 @@ Projet personnel FC Visualizer
 ## 🚀 Améliorations futures
 
 - **Interface web** : Éditeur visuel drag & drop
-- **Templates prédéfinis** : Bibliothèque de visualisations
 - **Intégration API** : Données en temps réel
 - **Collaboration** : Édition multi-utilisateurs
-- **Export avancés** : Formats 4K, animations complexes
+- **Export avancés** : Animations complexes
 - **IA générative** : Création automatique de narratifs
-- **Analytics** : Métriques d'engagement des vidéos
-- **Mobile** : Application compagnon pour prévisualisation
