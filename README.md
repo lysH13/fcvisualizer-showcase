@@ -18,6 +18,12 @@ Un outil de visualisation vidéo avancé pour l'analyse statistique du football,
 </p>
 
 <p align="center">
+  <a href="https://www.youtube.com/watch?v=F02xUDLv_wg">
+    <img src="https://img.youtube.com/vi/F02xUDLv_wg/maxresdefault.jpg" width="500">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://youtube.com/shorts/A9zdFnEmdC4">
     <img src="https://img.youtube.com/vi/A9zdFnEmdC4/maxresdefault.jpg" width="500">
   </a>
@@ -29,10 +35,7 @@ Un outil de visualisation vidéo avancé pour l'analyse statistique du football,
 <p align="center">
   <a href="https://youtube.com/shorts/IusQLI_F6L4">
     <img src="https://img.youtube.com/vi/IusQLI_F6L4/maxresdefault.jpg" width="500">
-  </a>
-  <a href="https://www.youtube.com/watch?v=F02xUDLv_wg">
-    <img src="https://img.youtube.com/vi/F02xUDLv_wg/maxresdefault.jpg" width="500">
-  </a>
+  </a> 
 </p>
 
 
