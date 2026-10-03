@@ -1,7 +1,7 @@
 # fcvisualizer-showcase
+Note : Ceci est un dépôt vitrine. Le code source complet est hébergé sur un dépôt privé.
 
 # FC VISUALIZER 📊⚽
-Note : Ceci est un dépôt vitrine. Le code source complet est hébergé sur un dépôt privé.
 Un outil de visualisation vidéo avancé pour l'analyse statistique du football, construit avec **Remotion**. Créez des vidéos dynamiques et engageantes à partir de données de joueurs, avec animations, masques personnalisés et analyses prédictives.
 
 ## 🎯 Vue d'ensemble
