@@ -49,11 +49,12 @@ Un outil de visualisation vidéo avancé pour l'analyse statistique du football,
 
 ## Extraits de code
 
-Ces exemples adaptés illustrent quatre parties du projet sans dépendre des données privées ni d'une URL de serveur locale :
+Ces composants présentent des visualisations du projet. Ils utilisent Remotion, D3 et certains composants internes disponibles dans le dépôt source privé ; ils ne sont pas autonomes dans ce dépôt vitrine.
 
-- [Visualisation XY animée](code-snippets/dynamic-xy.tsx) : agrégation de statistiques et animation temporelle avec D3 et Remotion.
-- [Masque piloté par les données](code-snippets/mask-intensity.tsx) : contour SVG animé dont l'intensité suit les statistiques.
-- [Positionneur d'image](code-snippets/image-positioner.tsx) : déplacement et zoom interactifs, avec persistance fournie par le composant parent.
+- [Nuages de performance](code-snippets/CloudsV2.tsx) : densité de trajectoires statistiques et regroupement spatial par mean shift.
+- [Comparaison XY](code-snippets/DynamicXY.tsx) : comparaison de joueurs selon deux statistiques cumulées.
+- [Graphique en cascade](code-snippets/GraphiqueEnCascade.tsx) : progression cumulée dans le temps, avec interpolation entre les matchs.
+- [Signaux par match](code-snippets/RawSignalsDates.tsx) : évolution des performances sur une chronologie commune.
 
 
 ### Tagline
