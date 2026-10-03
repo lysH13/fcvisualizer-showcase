@@ -47,6 +47,15 @@ Un outil de visualisation vidéo avancé pour l'analyse statistique du football,
 - **Analyse prédictive** : Algorithmes d'IA pour prédire les performances
 - **Interface de configuration** : Positionnement d'images, zoom, ratios
 
+## Extraits de code
+
+Ces exemples adaptés illustrent quatre parties du projet sans dépendre des données privées ni d'une URL de serveur locale :
+
+- [Visualisation XY animée](code-snippets/dynamic-xy.tsx) : agrégation de statistiques et animation temporelle avec D3 et Remotion.
+- [Masque piloté par les données](code-snippets/mask-intensity.tsx) : contour SVG animé dont l'intensité suit les statistiques.
+- [Positionneur d'image](code-snippets/image-positioner.tsx) : déplacement et zoom interactifs, avec persistance fournie par le composant parent.
+
+
 ### Tagline
 > "Transforming football data into cinematic experiences" 🎬⚽
 
